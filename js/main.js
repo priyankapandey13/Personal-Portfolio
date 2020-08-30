@@ -1,7 +1,5 @@
 console.log("Script loaded");
 
-// document.getElementById("navigation-content").style.transform="translate(0px)";
-
 window.onload = function () {
   // For loader window need to uncomment it later
   // let loaderwindow = document.querySelector("#loader");
@@ -97,15 +95,27 @@ window.onload = function () {
 
 function openMenu() {
   const navigation = document.getElementById("navigation-content");
-  // document.getElementById("navigation-content").style.transform="translate(0px)";
   navigation.style.transform = "translate(0px)";
   navigation.classList.add("mystyle");
 }
 function closeMenu() {
   document.getElementById("navigation-content").style.transform =
     "translate(0px, -100%)";
-  // breaker.style.display="none";
   setTimeout(() => {
     breaker.style.display = "none";
   }, 1200);
+}
+
+// Scroll menu
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navigation-bar").classList.add("naviscroll");
+  } else {
+    document.getElementById("navigation-bar").classList.remove("naviscroll");
+  }
 }
