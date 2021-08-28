@@ -1,5 +1,7 @@
-/*
+/*!
+  * Item: Willy Wonka Theme
   * Description: Personal Portfolio Website Template
+  * Author/Developer: Sujal
   * Version: v1
   */
 @import url("https://fonts.googleapis.com/css?family=Raleway:300&display=swap");
@@ -144,10 +146,10 @@ background-position: center center; */
 }
 .main-navigation a:hover {
   opacity: 1;
-  color:#c70039;
 }
-/* .main-navigation a::before {
+.main-navigation a::before {
   content: "";
+  /* position: absolute; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -158,19 +160,24 @@ background-position: center center; */
   font-size: 5em;
   font-weight: 400;
   font-family: monoton;
+  /* color:rgb(255, 255, 255,.1); */
+  /* color:#ffffff7a; */
   color: #fff;
+  /* color:#c70039; */
   z-index: 1;
   pointer-events: none;
   opacity: 0;
   letter-spacing: 100px;
   transition: all 0.4s ease;
-} */
-/* .main-navigation a:hover::before {
+  /* background-color: #000000cf;
+box-shadow: 0px 0px 56px 47px #000000db; */
+}
+.main-navigation a:hover::before {
   content: attr(data-text);
   opacity: 1;
   letter-spacing: 10px;
   text-shadow: 2px 2px 2px #c70039;
-} */
+}
 
 .menubar {
   /* position: absolute; */
@@ -359,7 +366,7 @@ line-height: 2vh;
   font-weight: 900;
   font-family: poppins;
   /* font-size: 16.7vh; */
-  font-size: 10vw;
+  font-size: 16.7vw;
   width: 80%;
   line-height: 75%;
   bottom: 0px;
@@ -2256,13 +2263,6 @@ form button:hover {
   }
   .cursor {
     display: none;
-    width: 20px;
-height: 20px;
-position: absolute;
-left: -10px;
-top: -10px;
-border-radius: 50%;
-border: 1px solid rgb(255, 255, 255);
   }
   .service:hover .service-img img {
     box-shadow: 0px 0px 0px 0px #c70039;
