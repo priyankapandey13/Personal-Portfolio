@@ -28,6 +28,8 @@
 
   <body>
     <div id="all">
+      <div class="cursor" ></div>
+
       <!--loader-->
       <div
         id="loader"
@@ -117,9 +119,23 @@
         <!--Social Media Links end-->
         <div class="header-content">
           <div class="header-content-box">
-            <div class="secondline">
+
+
+            <!-- Testing auto complete starts -->
+            <!-- <div class="secondline">
               <span class="color">PRIYANKA </span>SHARMA
-            </div>
+            </div> -->
+
+            <div class="secondline">
+              I'm 
+          <span class="txt-rotate color" data-period="1200" data-rotate="[ &quot; Priyanka.&quot;, &quot; A Developer.&quot;, &quot; A Designer.&quot;, &quot; A Freelancer.&quot; ]"><span class="wrap"></span></span>
+          <span class="slash">|</span>
+      </div>
+            
+            
+            
+            <!-- Testing auto complete ends -->
+
             <div class="contact">
               <a
                 href="Mailto: priyankaps131187@gmail.com"
@@ -364,7 +380,36 @@
           >
         </div>
         <div id="portfolio-content">
+
+
           <div class="portfolio portfolio-first">
+            <div class="portfolio-image">
+              <a href="https://fitnessproject.netlify.app/" target="_blank">
+                <img src="images/fitness.jpg" alt="portfolio-first" />
+              </a>
+            </div>
+            <div class="portfolio-text">
+              <h2>Fitness App</h2>
+              <p>
+                This single page app is designed and developed for Bobby(A Fitness trainer).
+                Bobby provides personal training as well as online classes.
+                This page is designed Using Photoshop and illustrator and developer with HTML, CSS, Javascript.
+                For all the animations i have used GreenSock.
+              </p>
+              <div class="button">
+                <a
+                  href="https://fitnessproject.netlify.app/"
+                  target="_blank"
+                  ><button>
+                    <span class="index">
+                      View Project<i class="gg-arrow-right"></i
+                    ></span></button
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio ">
             <div class="portfolio-image">
               <a href="https://hyf-meals-portal.herokuapp.com/" target="_blank">
                 <img src="images/portfolio-first.jpg" alt="portfolio-first" />
@@ -391,6 +436,9 @@
               </div>
             </div>
           </div>
+
+
+
           <div class="portfolio">
             <div class="portfolio-image">
               <a
@@ -580,10 +628,21 @@
       <!--contact end-->
     </div>
 
-    <script src="js/particles.js"></script>
+    <!-- <script src="js/particles.js"></script>
     <script src="js/snowfall.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> -->
+    
+    
+    <!-- New js for correcting animations starts here -->
+    <script src="js/effects.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    
+    <!-- New js for correcting animations ends here -->
+
+
+
     <!-- <script src="js/index.js"></script> -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
