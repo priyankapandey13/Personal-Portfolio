@@ -82,7 +82,7 @@ console.log("Script loaded");
     closeMenu();
   }
 
-  $(window).scroll(function () {
+  window.scroll(function () {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 50) {
@@ -92,25 +92,26 @@ console.log("Script loaded");
     }
   });
 
-
 // };
 
 
 
 
 
-// function openMenu() {
-//   const navigation = document.getElementById("navigation-content");
-//   navigation.style.transform = "translate(0px)";
-//   navigation.classList.add("mystyle");
-// }
-// function closeMenu() {
-//   document.getElementById("navigation-content").style.transform =
-//     "translate(0px, -100%)";
-//   setTimeout(() => {
-//     breaker.style.display = "none";
-//   }, 1200);
-// }
+function openMenu() {
+  const navigation = document.getElementById("navigation-content");
+  navigation.style.transform = "translate(0px)";
+  navigation.classList.add("mystyle");
+  console.log('Menu is open');
+}
+function closeMenu() {
+  document.getElementById("navigation-content").style.transform =
+    "translate(0px, -100%)";
+  setTimeout(() => {
+    breaker.style.display = "none";
+    console.log('Menu is Closed');
+  }, 1200);
+}
 
 // Scroll menu
 

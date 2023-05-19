@@ -45,6 +45,7 @@ window.onload = function () {
 
 // $(function(){
     var TxtRotate = function(el, toRotate, period) {
+      console.log(toRotate);
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
@@ -212,52 +213,64 @@ gsap.to('#navigation-content',0,{display:'flex',delay:2});
 
 
   // $(window).on('mousemove',cursormover);
-  $('.menubar').hover(cursorhover,cursor);
-  $('a').hover(cursorhover,cursor);
-  $('.navigation-close').hover(cursorhover,cursor);
-  
-  
-  
-    var submit = document.getElementById('submit');
+  // let menubaraction = document.getElementsByClassName('menubar');
+  let menubaraction = document.getElementById('navigation-bar');
+  menubaraction.addEventListener("mouseover", function() {
+  // menubaraction.addEventListener("mouseover ", function() {
+    console.log('I am here');
+    cursorhover();
+    cursor();
+  })
 
-    function sendEmail() {
-      var name = $("#name");
-      var email = $("#email");
-      var subject = $("#subject");
-      var body = $("#body");
-      $('#submit').text("Sending");
+  // $('.menubar').hover(cursorhover,cursor);
+  // $('a').hover(cursorhover,cursor);
+  // $('.navigation-close').hover(cursorhover,cursor);
+  
+  
 
-      if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
-          $.ajax({
-             url: 'mail.php',
-             method: 'POST',
-             dataType: 'json',
-             data: {
-                 name: name.val(),
-                 email: email.val(),
-                 subject: subject.val(),
-                 body: body.val()
+
+  // contact page Submit js : need to work and fix this part
+  
+  //   var submit = document.getElementById('submit');
+
+  //   function sendEmail() {
+  //     var name = $("#name");
+  //     var email = $("#email");
+  //     var subject = $("#subject");
+  //     var body = $("#body");
+  //     $('#submit').text("Sending");
+
+  //     if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+  //         $.ajax({
+  //            url: 'mail.php',
+  //            method: 'POST',
+  //            dataType: 'json',
+  //            data: {
+  //                name: name.val(),
+  //                email: email.val(),
+  //                subject: subject.val(),
+  //                body: body.val()
                  
-             }, success: function (response) {
-                  $('#myForm')[0].reset();
-                  $('#submit').text("Thank you!!!");
-             }
+  //            }, success: function (response) {
+  //                 $('#myForm')[0].reset();
+  //                 $('#submit').text("Thank you!!!");
+  //            }
              
-          });
-      }
-  }
+  //         });
+  //     }
+  // }
 
-  function isNotEmpty(caller) {
-      if (caller.val() == "") {
-          caller.css('border', '1px solid red');
-      $('#submit').text("Send");
-          return false;
-      } else
-          caller.css('border', '');
-      return true;
-  }
+  // function isNotEmpty(caller) {
+  //     if (caller.val() == "") {
+  //         caller.css('border', '1px solid red');
+  //     $('#submit').text("Send");
+  //         return false;
+  //     } else
+  //         caller.css('border', '');
+  //     return true;
+  // }
 
-  submit.addEventListener('click',sendEmail)
+  // submit.addEventListener('click',sendEmail)
 
 
 // })
